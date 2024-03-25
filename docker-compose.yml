@@ -10,6 +10,8 @@ services:
             - driver: nvidia
               capabilities: [ gpu ]
               count: all
+    ports:
+      - "3000:3000"
     build:
       context: .
       dockerfile: Dockerfile
