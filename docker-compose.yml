@@ -2,7 +2,7 @@ version: '3'
 
 services:
   textgen:
-    image: saladtechnologies/text-generation-webui:latest
+    image: saladtechnologies/text-generation-webui:91a7370
     deploy:
       resources:
         reservations:
