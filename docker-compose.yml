@@ -11,7 +11,7 @@ services:
               capabilities: [ gpu ]
               count: all
     ports:
-      - "3000:3000"
+      - "3000:80"
     build:
       context: .
       dockerfile: Dockerfile
