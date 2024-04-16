@@ -24,4 +24,4 @@ RUN echo '--api --listen --listen-port 3001' > CMD_FLAGS.txt
 ENV IPV4_PORT 80
 ENV IPV6_PORT 3000
 # set umask to ensure group read / write at runtime
-CMD /bin/bash -c "umask 0002 && export HOME=/home/app/text-generation-webui && ./start_linux.sh & socat TCP6-LISTEN:${IPV6_PORT},fork TCP4:127.0.0.1:${IPV4_PORT}"
+CMD /bin/bash -c "umask 0002 && export HOME=/home/app/text-generation-webui && ./start_linux.sh & socat TCP6-LISTEN:${IPV6_PORT},fork TCP4:0.0.0.0:${IPV4_PORT}"
