@@ -21,7 +21,7 @@ RUN echo '--api --listen --listen-port 3001' > CMD_FLAGS.txt
 
 
 # Default to API port 5000. Can be overridden at runtime.
-ENV IPV4_PORT 5000
+ENV IPV4_PORT 80
 ENV IPV6_PORT 3000
 # set umask to ensure group read / write at runtime
 CMD /bin/bash -c "umask 0002 && export HOME=/home/app/text-generation-webui && ./start_linux.sh & socat TCP6-LISTEN:${IPV6_PORT},fork TCP4:127.0.0.1:${IPV4_PORT}"
